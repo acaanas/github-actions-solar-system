@@ -42,7 +42,7 @@
         - name: install nodejs dependencies
           run: npm install
         - name: run code coverage
-          run: npm run code-coverage
+          run: npm run coverage
         - name: upload code coverage
           if: always()
           uses: actions/upload-artifact@v4
