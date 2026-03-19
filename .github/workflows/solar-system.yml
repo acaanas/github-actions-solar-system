@@ -29,7 +29,7 @@
           uses: actions/cache@v4
           with:
             path: ~/.npm
-            key: '${{ runner.os }}-node-modules-${{ hashFiles(''**/package-lock.json'')}}'
+            key: '${{ runner.os }}-node-modules-${{ hashFiles(''package-lock.json'') }}'
         - name: Archive Test Result
           if: always()
           uses: actions/upload-artifact@v4
