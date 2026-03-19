@@ -25,6 +25,11 @@
           run: npm install
         - name: Unit Testing
           run: npm test
+        - name: Cache NPM dependencies
+          uses: actions/cache@v4
+          with:
+            path: ~/.npm
+            key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json')}}
         - name: Archive Test Result
           if: always()
           uses: actions/upload-artifact@v4
